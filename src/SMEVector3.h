@@ -41,15 +41,7 @@ namespace SME
 
 		const float magnitude() const;
 
-		void normalize()
-		{
-			float magnitude = this->magnitude();
-			if ( magnitude > 0.0f )
-			{
-				x /= magnitude;
-				y /= magnitude;
-				z /= magnitude;
-			}
-		}
+		void normalize();
+
 	};
 }

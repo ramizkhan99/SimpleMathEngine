@@ -103,6 +103,17 @@ namespace SME
 		return std::sqrt(x * x + y * y + z * z);
 	}
 
+	void SMEVector3::normalize()
+	{
+		float magnitude = this->magnitude();
+		if ( magnitude > 0.0f )
+		{
+			x /= magnitude;
+			y /= magnitude;
+			z /= magnitude;
+		}
+	}
+
 	float SMEVector3::dot(const SMEVector3& v) const
 	{
 		return x * v.x + y * v.y + z * v.z;
